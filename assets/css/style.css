@@ -1,0 +1,83 @@
+body {
+	background-color: #FFF8DC;
+	overflow: hidden;
+}
+
+h4 {
+	font-family: 'Maven Pro', serif;
+	font-weight: bolder;
+	color: black;
+}
+
+#sidebar {
+	text-align: center;
+	border: 3px solid DarkSlateGrey;
+	box-shadow: 5px 5px 2px DarkSlateGrey;
+	border-radius: 10px;
+}
+
+#gif-output, #sidebar {
+	margin: 40px 0 0 5px;
+}
+
+#gif-button-group button {
+	background-color: blue;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin: 0 2px;
+}
+
+#gif-button-group {
+	margin: 0 0 15px 5px;
+	text-align: left;
+}
+
+#gif-entry {
+	width: 40%;
+}
+
+#gif-form {
+	margin: 10px 0 10px 0;
+}
+
+#gif-output {
+
+}
+
+#gif-output div {
+	position: relative;
+	float: left;
+	margin: 5px 5px 5px 5px;
+	height: 200px;
+	width: 200px;
+}
+
+#gif-output li img {
+	height: 200px;
+	width: 200px;
+	border: 3px solid DarkSlateGrey;
+	box-shadow: 5px 5px 2px DarkSlateGrey;
+	border-radius: 10px;
+}
+
+#gif-output h6 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px LightCoral, 0 0 5px darkblue;
+	opacity: 0.8;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	text-shadow: 1px 1px 1px DarkSlateGrey;
+}
