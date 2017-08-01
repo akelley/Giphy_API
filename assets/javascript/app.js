@@ -7,7 +7,7 @@ var app = {
 
 	search: function(searchTerm){
   		$("#gif-list").empty();
-
+  		
   		image = [];
 		var protocol = "https://";
 		var domain = "api.giphy.com";
@@ -49,8 +49,13 @@ $(document).ready(function(){
   		event.preventDefault();
 
   		if($("#gif-entry").val() !== ""){
+  			var temp = $("#gif-entry").val();
+  			temp = temp.split(' ').join('+');	// for any search item that has spaces, put pluses instead
+  												// put that as the new button's id. Otherwise, search id will only
+  												// search the first word in the id
+
   			// as long as the gif-entry field isn't empty, append the entry to another button
-  			$("#gif-button-group").append("<button id=" + $("#gif-entry").val() + ">" + $("#gif-entry").val() + "</button>");
+  			$("#gif-button-group").append("<button id=" + temp + ">" + $("#gif-entry").val() + "</button>");
   			$("#gif-entry").val(""); // clear the entry field
   		}
   	});
@@ -78,7 +83,9 @@ $(document).ready(function(){
   		// but make sure that it's not doing unnecessary searches if the user clicks 
   		// on the buttons (or elements) below
 
-  		var temp = $(this).attr('id');
+	  	var temp = $(this).attr('id');
+		temp = temp.split('+').join(' ');
+		// for any search id with multiple words, replace plusses with spaces
 
 		if(temp !== "gif-submit" && temp !== "gif-clear" && temp !== "gif-add" && 
 		   temp !== "gif-entry" && temp !== "gif-button-group" && temp !== "sidebar" && 
